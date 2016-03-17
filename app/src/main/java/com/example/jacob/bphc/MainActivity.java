@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         mButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startNewsFeed();
+                startTimeline();
             }
         });
 
@@ -84,7 +84,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+private void startTimeline(){
+    Intent intent = new Intent(this, TimeLineActivity.class);
+    startActivity(intent);
+}
     private void startNewsFeed(){
         Intent intent = new Intent(this, BeforeNewsFeedActivity.class);
         startActivity(intent);

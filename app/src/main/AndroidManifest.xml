@@ -89,6 +89,9 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="0222be8c232649d16329c898ef499793100f85b9" />
+
+        <activity android:name=".TimeLineActivity">
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
