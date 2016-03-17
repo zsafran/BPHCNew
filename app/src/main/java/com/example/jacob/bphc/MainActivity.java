@@ -10,9 +10,17 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.twitter.sdk.android.Twitter;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import io.fabric.sdk.android.Fabric;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+    private static final String TWITTER_KEY = "jpQ6wJspsCJ0lpzUL7jgpEwuO";
+    private static final String TWITTER_SECRET = "07t6hJhiIw5JvG35ji91gaWvvSmf8cCt7GNRYdgZgEYnqbsTB9";
+
 
     private ImageView mLogoImageView;
     private TextView mForumTextView;
@@ -24,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+        Fabric.with(this, new Twitter(authConfig));
         setContentView(R.layout.activity_main);
 
         mLogoImageView = (ImageView)findViewById(R.id.bphcLogo);
