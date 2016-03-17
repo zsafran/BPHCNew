@@ -9,6 +9,8 @@
     <string name="title_activity_thread">ThreadActivity</string>
     <string name="title_activity_new_thread">NewThreadActivity</string>
     <string name="NoTweetsMessage">No Tweets</string>
+    <string name="Forum">Forum</string>
+    <string name="News">News</string>
 
 
 </resources>

@@ -116,6 +116,12 @@ private void startTimeline(){
         if (id == R.id.action_settings) {
             return true;
         }
+        else if (id == R.id.News_Button) {
+            startTimeline();
+        }
+        else if (id == R.id.Forum_Button){
+            startForum();
+        }
 
         return super.onOptionsItemSelected(item);
     }
