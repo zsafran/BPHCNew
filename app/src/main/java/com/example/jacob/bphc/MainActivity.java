@@ -51,19 +51,30 @@ public class MainActivity extends AppCompatActivity {
         mButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                 createHelpPage1();
+=======
+                createHelpPage2();
+>>>>>>> origin/master
             }
         });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
+<<<<<<< HEAD
 
     public void createHelpPage1() {
         Intent intent = new Intent(this, Main2Activity.class);
         startActivity(intent);
     }
 
+=======
+public void createHelpPage2(){
+    Intent intent = new Intent(this, Main2Activity.class);
+    startActivity(intent);
+}
+>>>>>>> origin/master
     public void createHelpPage(){
         mButton2.setVisibility(View.VISIBLE);
         mForumTextView.setVisibility(View.VISIBLE);
