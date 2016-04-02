@@ -16,7 +16,7 @@ public class TimeLineActivity extends ListActivity{
         setContentView(R.layout.activity_time_line);
 
         final UserTimeline userTimeline = new UserTimeline.Builder()
-                .screenName("fabric")
+                .screenName("healthyboston")
                 .build();
         final TweetTimelineListAdapter adapter = new TweetTimelineListAdapter.Builder(this)
                 .setTimeline(userTimeline)
