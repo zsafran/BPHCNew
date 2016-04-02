@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String TWITTER_KEY = "jpQ6wJspsCJ0lpzUL7jgpEwuO";
     private static final String TWITTER_SECRET = "07t6hJhiIw5JvG35ji91gaWvvSmf8cCt7GNRYdgZgEYnqbsTB9";
 
-
     private ImageView mLogoImageView;
     private TextView mForumTextView;
     private TextView mNewsFeedTextView;
@@ -52,12 +51,17 @@ public class MainActivity extends AppCompatActivity {
         mButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createHelpPage();
+                createHelpPage1();
             }
         });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+    }
+
+    public void createHelpPage1() {
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
     }
 
     public void createHelpPage(){

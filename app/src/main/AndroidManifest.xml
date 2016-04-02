@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
     <uses-permission android:name="android.permission.READ_PROFILE"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -86,13 +87,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jacob.bphc.ThreadActivity"/>
         </activity>
+
         <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="0222be8c232649d16329c898ef499793100f85b9" />
+            android:value="0222be8c232649d16329c898ef499793100f85b9"/>
 
         <activity android:name=".TimeLineActivity">
         </activity>
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
