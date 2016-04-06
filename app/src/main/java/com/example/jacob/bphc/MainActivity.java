@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.firebase.client.Firebase;
 import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 import io.fabric.sdk.android.Fabric;
@@ -28,12 +30,14 @@ public class MainActivity extends AppCompatActivity {
     private Button mButton1;
     private Button mButton2;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
         Fabric.with(this, new Twitter(authConfig));
         setContentView(R.layout.activity_main);
+        Firebase.setAndroidContext(this);
 
         mLogoImageView = (ImageView)findViewById(R.id.bphcLogo);
         mForumTextView = (TextView) findViewById(R.id.Forum);
@@ -59,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
+
 
 
     public void createHelpPage1() {
